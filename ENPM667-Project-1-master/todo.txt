@@ -1,0 +1,35 @@
++ Generate Jacobian from DH parameters
++ determine motor forces required from the provided torques and force in the Z direction
+  + "Quadrotor inputs"
++ determine rotational torque required from desired roll and pitch control
+  + "Quadrotor Attitude Controller"
++ determine roll and pitch from desired position control
+  + "Quadrotor position controller"
++ conduct inverse kinematics
+  - find the derivative of the controlled and uncontrolled jacobians
++ determine manipulator link torques from the controlled variables
+- calculate inertia matrix
+- calculate gravity matrix
+- calculate coriolis matrix
++ make "system state" class
++ feed the drone state back into the following modules:
+  + Quadrotor position controller
+  + Quadrotor attitude controller
+  + Manipulator controller
+  + (this includes the controllable and uncontrollable variables, as well as their derivatives)
+  - introduce artificial noise into the readings
++ feed the following back into the inverse kinematics
+  + state
+  + the derivative of the state
+  + the second derivative of the uncontrollable variables (roll and pitch)
+- visualize results
+  - verify path for ee trajectory
++ generate reference trajectory
++ emulate vehicle motion (in response to our provided input)
+- debug
+  - we only really need to verify that the EE follows the desired path
+
++ finish motion_control.calculate_control_inputs
+- plot desired path vs actual path using matplotlib
+  + desired path
+  - actual path
