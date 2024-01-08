@@ -1,5 +1,7 @@
 # Simulation and Technical Report on Adaptive Control for UAVs equipped with a Robotic Arm
 
+![drone](drone.png)
+
 This repository addresses the motion control challenges of an end effector attached to a quadrotor through a hierarchical control architecture. The work involves writing a comprehensive technical report and conducting simulations based on a research paper study. The control scheme and stability analysis play a crucial role in achieving effective motion control.
 
 ## Figures
